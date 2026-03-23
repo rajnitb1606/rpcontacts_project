@@ -27,7 +27,7 @@ $ source venv/bin/activate
 
 ## About the Author
 
-Real Python - Email: office@realpython.com
+Rajani Kant Verma - Email: test@email.com
 
 ## License
 

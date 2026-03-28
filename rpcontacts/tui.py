@@ -16,6 +16,22 @@ class ContactsApp(App):
 
     def compose(self):
         yield Header()
+        contacts_list = DataTable(classes="contacts-list")
+        contacts_list.focus()
+        contacts_list.add_columns("Name","Phone","Email")
+        contacts_list.zebra_stripes=True
+        add_button = Button("Add",variant="success",id="add")
+        add_button.focus()
+        delete_button = Button("Delete",variant="warning",id="delete")
+        clear_all_button = Button("Clear All",variant="error",id="clear_all")
+        buttons_panel = Vertical(
+            add_button,
+            delete_button,
+            Static(classes="separator"),
+            clear_all_button,
+            classes="buttons-panel"
+        )
+        yield Horizontal(contacts_list, buttons_panel)
 
         yield Footer()
 
